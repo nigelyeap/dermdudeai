@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Dermatological Case</title>
+</head>
+<body>
+    <h2>AI-powered Dermatological Doctor</h2>
+    <p>
+        Read the details at the bottom of the page for more information on the project and the cases it can diagnose.
+        <br><br>
+        Instructions:
+        <br>
+        1. Take a photo of the affected area in natural lighting, ensuring the image is clear and in focus. 
+        <br>
+        Try to make the affected area the full image and avoid any unnecessary features.
+        <br>
+        2. Write a short description of your summaries, add details such as any potential causes, 
+        <br>
+        duration of the condition, any bleeding or itching, etc.
+        <br>
+        3. Upon submission, we will provide you with your diagnosis, our detailed suggestion for treatment
+        <br>
+        and prevention as well as some other conditions it could be.
+        <br>
+        Do note that this should not be considered as professional medical advice and should be only used for informational purposes only.
+        <br>
+        Please see a doctor immediately if your condition worsens or if you have any immediate concerns.
+        <br><br>
+    </p>
+    <div class = "photosub">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit Case</button>
+        </form>
+    </div>
+    <br><br><br><br><br>
+    <h3>Project Details</h3>
+    <p>
+        The AI-powered Dermatological Doctor is a project by Nigel Yeap that uses a machine learning model to diagnose skin conditions.
+        <br>
+        Do check out my </p><a id = "inline" href = "https://github.com/nigelyeap">github</a> or <a id = "inline"href = "https://www.linkedin.com/in/nigel-yeap/">linkedin</a><p> for more projects and information about me! Do reach out to me if you have any questions or feedback.
+        <br>
+        <br>
+        The model is trained on a dataset of skin images and their corresponding diagnoses. The credit for the dataset will be provided below.
+        <br>
+        The model can diagnose the following skin conditions:
+        <br><br>
+        1. Acne and Rosacea Photos
+        <br>
+        2. Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions
+        <br>
+        3. Atopic Dermatitis Photos
+        <br>
+        4. Bullous Disease Photos
+        <br>
+        5. Cellulitis Impetigo and other Bacterial Infections
+        <br>
+        6. Eczema Photos
+        <br>
+        7. Exanthems and Drug Eruptions
+        <br>
+        8. Hair Loss Photos Alopecia and other Hair Diseases
+        <br>
+        9. Herpes HPV and other STDs Photos
+        <br>
+        10. Light Diseases and Disorders of Pigmentation
+        <br>
+        11. Lupus and other Connective Tissue diseases
+        <br>
+        12. Melanoma Skin Cancer Nevi and Moles
+        <br>
+        13. Nail Fungus and other Nail Disease
+        <br>
+        14. Poison Ivy Photos and other Contact Dermatitis',
+        <br>
+        15. Psoriasis pictures Lichen Planus and related diseases
+        <br>
+        16. Scabies Lyme Disease and other Infestations and Bites
+        <br>
+        17. Seborrheic Keratoses and other Benign Tumors
+        <br>
+        18. Systemic Disease
+        <br>
+        19. Tinea Ringworm Candidiasis and other Fungal Infections
+        <br>
+        20. Urticaria Hives
+        <br>
+        21. Vascular Tumors
+        <br>
+        22. Vasculitis Photos
+        <br>
+        23. Warts Molluscum and other Viral Infections
+        <br>
+        <br>
+        The model is not a substitute for professional medical advice and should be used for informational purposes only.
+        <br>
+        If you have a skin condition, please consult a dermatologist or healthcare professional for a proper diagnosis and treatment.
+</body>
+</html>

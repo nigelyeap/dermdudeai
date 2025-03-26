@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('../fonts/ProximaNova/ProximaNova-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+head{
+    font-family: 'ProximaNova';
+    text-align:center;
+}
+body {
+    font-family: 'ProximaNova';
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    left:300px;
+    background-color: #f4f4f4;
+    position:relative;
+}
+    
+h1, h2, h3 {
+    color: #333;
+    background-color: #f4f4f4;
+    font-family: 'ProximaNova';
+    right: 0px;
+    padding:0px;
+}
+
+form {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    margin-right:0px;
+    font-family: 'ProximaNova';
+    box-sizing:border-box;
+    width:35%;
+    border: black 5px solid;
+}
+
+.photosub input, .photosub textarea, .photosub select {
+    font-family: 'ProximaNova';
+}
+
+.photosub button {
+    font-family: 'ProximaNova';
+}
+
+.photosub{
+    background-color:#f4f4f4;
+}
+
+
+button {
+    font-family: 'ProximaNova';
+    background: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#id_image{
+    font-family:'ProximaNova';
+}
+
+#id_description{
+    font-family:'ProximaNova';
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+p{
+    padding:0px;
+    display:inline;
+}
+label {
+    position:absolute;
+    left:0px;
+    top: -20px; 
+  }
+
+#inline{
+    display:inline;
+    padding: 0px;
+}

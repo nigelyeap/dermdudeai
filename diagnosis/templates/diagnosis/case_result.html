@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<head>
+    <title>Diagnosis Result test</title>
+    <script>
+        function deleteImage() {
+            fetch('/diagnosis/delete_image/{{ case_id }}/')
+                .then(response => console.log('Image deleted'));
+        }
+        window.onload = deleteImage;
+    </script>
+</head>
+<body>
+    <h2>Diagnosis Result</h2>
+    <h3>Diagnosis: {{ diagnosis }}</h3> 
+    <p>Advice: {{ advice | safe }}</p>  
+
+    {% if image_url %}
+        <h3>Uploaded Image:</h3>
+        <img src="{{ image_url }}" alt="Uploaded Image" style="max-width: 400px; max-height: 400px;">
+    {% else %}
+        <p>No image available for this diagnosis.</p>
+    {% endif %}
+    <p>Case ID: {{ case_id }}</p>
+    <br><br>
+    <a href="{% url 'submit_case' %}" style="text-decoration: none;">
+        <button type="button">Submit Another Case</button>
+    </a>
+</body>
+</html>
